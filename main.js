@@ -1,9 +1,28 @@
+function defineGrupo(time){
+  let grupo
+  switch (time) {
+    case "ecuador" || "netherland" || "qatar" || "senegal":
+      grupo = 'A'
+  }
+  
+
+  return`
+  ${grupo}
+  `
+
+}
+
+
 function createGame(player1, hour, player2) {
   return `
 <li>
-  <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" />
+  <img src="./assets/gupo${defineGrupo(
+    player1
+  )}/icon-${player1}.svg" alt="Bandeira do ${player1}" />
   <strong>${hour}</strong>
-  <img src="./assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
+  <img src="./assets/gupo${defineGrupo(
+    player1
+  )}/icon-${player2}.svg" alt="Bandeira do ${player2}" />
 </li>
 `
 }
@@ -14,6 +33,7 @@ function createCard(date, day, game) {
   return `
   <div class="card" style = "animation-delay: ${delay}s">
           <h2>${date} <span>${day}</span></h2>
+          <h2>Grupo A</h2>
           <ul>
             ${game}
           </ul>

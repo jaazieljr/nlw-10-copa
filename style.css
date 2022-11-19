@@ -44,7 +44,26 @@ body {
 header {
   margin-bottom: 63px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.3s;
 }
+header:hover {
+  transform: scale(1.1);
+}
+header img {
+  width: 200px;
+}
+header h2 {
+  padding-top: 20px;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  color: #e1e1e6;
+}
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -115,11 +134,11 @@ header {
 .card h2,
 .card ul li strong,
 .card ul li img {
-  transition: transform 0.3s;
+  transition: transform 1s;
 }
 .card {
   opacity: 0;
-  animation: appear .3s forwards;
+  animation: appear 0.3s forwards;
 }
 
 @keyframes appear {
